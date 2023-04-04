@@ -1,6 +1,7 @@
 class Solution {
 public:
     long long countSubarrays(vector<int>& nums, int minK, int maxK) {
+        //Page 106
         int minB = -1, maxB = -1, badB=-1;
         long long cnt = 0;
         for(int i = 0; i < nums.size(); i++){
