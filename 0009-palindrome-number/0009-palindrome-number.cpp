@@ -1,6 +1,7 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
+        //Page 116
         bool pal = true;
         vector<int> ans;
         int b = 0;
