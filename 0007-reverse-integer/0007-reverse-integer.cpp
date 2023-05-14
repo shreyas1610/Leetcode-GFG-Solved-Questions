@@ -1,6 +1,7 @@
 class Solution {
 public:
     int reverse(int x) {
+        //Page 115
         int ans = 0;
         while(x!=0){
             int digit = x%10;
