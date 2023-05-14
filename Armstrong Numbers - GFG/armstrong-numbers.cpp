@@ -8,24 +8,20 @@ using namespace std;
 class Solution {
   public:
     string armstrongNumber(int n){
-        // code here
-        string s1 = "Yes";
-        string s2 = "No";
-        int a = 0;
-        int b = n;
-        int sum = 0;
-        while(n>0){
-            a = n%10;
-            sum = sum + (a*a*a);
-            //cout<<sum<<" ";
+        //Page 118
+        string yes="Yes";
+        string no = "No";
+        int ans = 0;
+        int c = n;
+        while(n!=0){
+            int digit = n%10;
+            ans = ans + (digit*digit*digit);
             n=n/10;
         }
-        if(sum==b){
-            return s1;
-        }
-        else{
-            return s2;
-        }
+        if(ans==c)
+            return yes;
+            else
+            return no;
     }
 };
 
