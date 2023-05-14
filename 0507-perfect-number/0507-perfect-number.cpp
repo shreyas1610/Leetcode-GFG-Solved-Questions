@@ -1,6 +1,7 @@
 class Solution {
 public:
     bool checkPerfectNumber(int num) {
+        //Page 119
         vector<int> ans;
         for(int i = 1;i*i<=num;i++){
             if(num%i==0){
