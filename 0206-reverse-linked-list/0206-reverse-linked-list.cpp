@@ -9,9 +9,25 @@
  * };
  */
 class Solution {
+    //Page 126
 public:
+    void reverse(ListNode* &head, ListNode* curr, ListNode* prev){
+        //base case
+        if(curr==NULL){
+            head = prev;
+            return ;
+            
+        }
+        
+        ListNode* f = curr->next;
+        reverse(head, f, curr);
+        curr->next=prev;
+    }
+    
+    
     ListNode* reverseList(ListNode* head) {
         //Page 126
+        /*
         //Approach 1
         
         if(head==NULL || head->next == NULL){
@@ -31,6 +47,13 @@ public:
         }
         
         return prev;
+        */
+        
+        //Approach 2
+        ListNode *prev = NULL;
+        ListNode *curr = head;
+        reverse(head, curr, prev);
+        return head;
         
     }
 };
