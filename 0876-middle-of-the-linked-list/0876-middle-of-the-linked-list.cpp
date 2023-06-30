@@ -11,6 +11,7 @@
 class Solution {
 public:
     //Page128
+    /*
     //Approach 1
     int getLength(ListNode* head){
         int len = 0;
@@ -31,5 +32,27 @@ public:
             cnt++;
         }
         return temp;
+    }
+    */
+    
+    //Approach 2
+    ListNode* middleNode(ListNode* head){
+        if(head==NULL || head->next==NULL)
+            return head;
+        
+        if((head->next)->next==NULL)
+            return head->next;
+        
+        ListNode* slow = head;
+        ListNode* fast = head->next;
+        
+        while(fast!=NULL){
+            fast = fast->next;
+            if(fast!=NULL)
+                fast = fast->next;
+            slow = slow->next;
+            
+        }
+        return slow;
     }
 };
