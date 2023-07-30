@@ -104,6 +104,7 @@ struct Node
 class Solution{
     public:
     //Function to check whether a binary tree is balanced or not.
+    //Page 177
     pair<bool, int> isBalancedFast(Node* root) {
                 // base case
         if(root == NULL)
